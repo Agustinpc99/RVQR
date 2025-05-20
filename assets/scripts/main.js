@@ -29,7 +29,7 @@ boton.addEventListener("click", () => {
   },
     (decodedText) => {
       resultado.innerText = `Código detectado: ${decodedText}`;
-      codigo.value = decodedText;
+      zona.innerHTML = `<img src='https://api.qrserver.com/v1/create-qr-code/?data={"id":"${decodedText}","t":"lm"}&size=200x200' alt=""></img>`
       escaner.stop().then(() => {
         escaner.clear();
         escaner = null;
