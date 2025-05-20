@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RVQR Prototype</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        #contenedor-video {
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 4/3;
+        position: relative;
+        overflow: hidden;
+    }
+
+        #contenedor-video video,
+        #contenedor-video canvas {
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    </style>
 </head>
-<body>
+<body class="max-w-screen">
     <header class="bg-black p-2">
         <h1 class="text-white text-xl">RVQR Prototype</h1>
     </header>
@@ -14,8 +32,7 @@
         <div>
             <h2>Escanear Código de Barras</h2>
             <button id="btn-escanear" class="bg-gray-400">Iniciar escaneo</button>
-            <div id="contenedor-video" style="width: 400px; height: 300px;"></div>
-            <p id="resultado"></p>
+            <div id="contenedor-video" class="max-w-screen min-w-[300px]"></div>
         </div>
         <div>
             <input type="text" name="codigo" id="cod" class="bg-white p-1">
