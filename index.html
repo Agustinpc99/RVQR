@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RVQR Prototype</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header class="bg-black p-2">
+        <h1 class="text-white text-xl">RVQR Prototype</h1>
+    </header>
+    <main class="bg-gray-600 min-h-screen flex flex-col justify-evenly grid justify-items-center p-4">
+        <div>
+            <button id="btn-escanear" class="bg-gray-400">Iniciar escaneo</button>
+            <div id="reader" style="width:300px;"></div>
+        </div>
+        <div>
+            <input type="text" name="codigo" id="cod" class="bg-white p-1">
+        </div>
+        <div id="zonaqr">
+            
+        </div>
+    </main>
+    <footer></footer>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="./assets/scripts/main.js"></script>
+</body>
+</html>
