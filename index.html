@@ -12,8 +12,10 @@
     </header>
     <main class="bg-gray-600 min-h-screen flex flex-col justify-evenly grid justify-items-center p-4">
         <div>
+            <h2>Escanear Código de Barras</h2>
             <button id="btn-escanear" class="bg-gray-400">Iniciar escaneo</button>
-            <div id="reader" style="width:300px;"></div>
+            <div id="contenedor-video" style="width: 400px; height: 300px;"></div>
+            <p id="resultado"></p>
         </div>
         <div>
             <input type="text" name="codigo" id="cod" class="bg-white p-1">
@@ -23,7 +25,7 @@
         </div>
     </main>
     <footer></footer>
-    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="https://unpkg.com/quagga/dist/quagga.min.js"></script>
     <script src="./assets/scripts/main.js"></script>
 </body>
 </html>
